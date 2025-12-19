@@ -1,0 +1,46 @@
+/* Previous styles... */
+
+.menu-bar {
+  background: #eee;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  gap: 10px;
+}
+
+.menu-bar button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.menu-bar button.is-active {
+  background: black;
+  color: white;
+}
+
+/* TipTap Editor Styles */
+.tiptap-editor {
+  flex: 1;
+  padding: 20px 40px;
+  overflow-y: auto;
+  cursor: text;
+}
+
+.ProseMirror {
+  outline: none;
+  font-size: 18px;
+  line-height: 1.6;
+  min-height: 300px;
+}
+
+.ProseMirror p {
+  margin-bottom: 10px;
+}
+
+.ProseMirror h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
