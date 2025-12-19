@@ -23,10 +23,21 @@ function DocumentList() {
   // Function to create a new blank document
   const createDocument = async () => {
     try {
+      // 1. Generate the formatted date (e.g., "Dec 19, 2025")
+      const dateStr = new Date().toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric'
+      });
+
+      // 2. Create the dynamic title
+      const newTitle = `Draft - ${dateStr}`;
+
       const response = await api.post('/documents', {
-        title: "Untitled Doc",
+        title: newTitle, // <--- This uses the date now
         content: ""
       });
+      
       navigate(`/editor/${response.data.id}`);
     } catch (error) {
       console.error("Error creating document:", error);
